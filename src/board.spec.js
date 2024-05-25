@@ -32,3 +32,10 @@ describe('ボードに関するテスト', () => {
         expect(board1.nextCell(1)).toBe(1)
     })
 })
+
+describe('活性数に基づいて、来世が決まる', () => {
+    it('活性数が 3 なら次世代は活性', () => {
+        const board1 = new Board(bl1)
+        expect(board1.nextLife(3)).toBe(1)
+    })
+})
