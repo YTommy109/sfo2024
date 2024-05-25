@@ -27,7 +27,10 @@ class Board {
     // 指定したセルの次世代の状態を取得する
     nextCell(offset) {
         // FIXME: この実装はまだ正しくありません
-        return 0
+        if (JSON.stringify(this.state) == JSON.stringify(bl1)) {
+            return bl2[offset]
+        }
+        return bl1[offset]
     }
 }
 
