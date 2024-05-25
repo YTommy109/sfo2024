@@ -24,6 +24,11 @@ class Board {
         }
         return bl1
     }
+    // 指定したセルの次世代の状態を取得する
+    nextCell(offset) {
+        // FIXME: この実装はまだ正しくありません
+        return 0
+    }
 }
 
 export default Board
