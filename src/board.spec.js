@@ -27,4 +27,8 @@ describe('ボードに関するテスト', () => {
         const board1 = new Board(bl1)
         expect(board1.nextCell(0)).toBe(0)
     })
+    it('bt1 の 1 番の次世代は非活性である', () => {
+        const board1 = new Board(bl1)
+        expect(board1.nextCell(1)).toBe(1)
+    })
 })
