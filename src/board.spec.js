@@ -16,11 +16,11 @@ const bl2 = [
 
 describe('ボードに関するテスト', () => {
     it('ブリンカーが動作する', () => {
-        const board = new Board()
-        expect(board.nextBoard(bl1)).toEqual(bl2)
+        const board = new Board(bl1)
+        expect(board.nextBoard()).toEqual(bl2)
     })
     it('逆のブリンカーが動作する', () => {
-        const board = new Board()
-        expect(board.nextBoard(bl2)).toEqual(bl1)
+        const board = new Board(bl2)
+        expect(board.nextBoard()).toEqual(bl1)
     })
 })

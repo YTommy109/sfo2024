@@ -13,10 +13,13 @@ const bl2 = [
 ]
 
 class Board {
+    constructor(init) {
+        this.state = init
+    }
     // 次世代ボードを取得する
-    nextBoard(prev) {
+    nextBoard() {
         // FIXME: この実装はまだ正しくありません
-        if (JSON.stringify(prev) == JSON.stringify(bl1)) {
+        if (JSON.stringify(this.state) == JSON.stringify(bl1)) {
             return bl2
         }
         return bl1
