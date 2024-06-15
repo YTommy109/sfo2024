@@ -19,4 +19,8 @@ describe('ボードに関するテスト', () => {
         const board = new Board()
         expect(board.nextBoard(bl1)).toEqual(bl2)
     })
+    it('逆のブリンカーが動作する', () => {
+        const board = new Board()
+        expect(board.nextBoard(bl2)).toEqual(bl1)
+    })
 })
