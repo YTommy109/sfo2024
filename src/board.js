@@ -42,8 +42,10 @@ class Board {
     nextCell(offset) {
         const population = this.population(offset)
         const state = this.state[offset]
-
-        return this.nextLife(population, state)
+        if (population == 2) {
+            return state
+        }
+        return population == 3 ? 1 : 0
     }
     // 活性数によって次世代を決定する
     nextLife(population, state=null) {
