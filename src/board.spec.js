@@ -54,4 +54,8 @@ describe('八近傍の活性数を数える', () => {
         const board1 = new Board(bl1)
         expect(board1.population(0)).toBe(2)
     })
+    it('bl1 の北の活性数は 3', () => {
+        const board1 = new Board(bl1)
+        expect(board1.population(1)).toBe(3)
+    })
 })
