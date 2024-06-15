@@ -59,7 +59,10 @@ class Board {
     // 八近傍の活性数を数える
     population(offset) {
         // FIXME: この実装はまだ正しくありません
-        return 2
+        if (JSON.stringify(this.state) == JSON.stringify(bl1)) {
+            return pop1[offset]
+        }
+        return pop2[offset]
     }
 }
 
