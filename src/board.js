@@ -40,7 +40,10 @@ class Board {
     }
     // 指定したセルの次世代の状態を取得する
     nextCell(offset) {
-        return this.nextLife(this.population(offset), this.state[offset])
+        const population = this.population(offset)
+        const state = this.state[offset]
+
+        return this.nextLife(population, state)
     }
     // 活性数によって次世代を決定する
     nextLife(population, state=null) {
