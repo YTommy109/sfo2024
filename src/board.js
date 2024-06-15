@@ -33,8 +33,10 @@ class Board {
         return bl1[offset]
     }
     // 活性数によって次世代を決定する
-    nextLife(population) {
-        // FIXME: この実装はまだ正しくありません
+    nextLife(population, state=null) {
+        if (population == 2) {
+            return state
+        }
         return population == 3 ? 1 : 0
     }
 }
