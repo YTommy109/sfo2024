@@ -56,6 +56,11 @@ class Board {
         }
         return population == 3 ? 1 : 0
     }
+    // 八近傍の活性数を数える
+    population(offset) {
+        // FIXME: この実装はまだ正しくありません
+        return 2
+    }
 }
 
 export default Board
