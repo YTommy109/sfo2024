@@ -35,7 +35,7 @@ class Board {
     // 活性数によって次世代を決定する
     nextLife(population) {
         // FIXME: この実装はまだ正しくありません
-        return 1
+        return population == 3 ? 1 : 0
     }
 }
 
