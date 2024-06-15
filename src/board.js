@@ -16,7 +16,10 @@ class Board {
     // 次世代ボードを取得する
     nextBoard(prev) {
         // FIXME: この実装はまだ正しくありません
-        return bl2
+        if (JSON.stringify(prev) == JSON.stringify(bl1)) {
+            return bl2
+        }
+        return bl1
     }
 }
 
