@@ -47,7 +47,7 @@ class Board {
         } else {
             pop = pop2
         }
-        return this.nextLife(pop[offset], this.state[offset])
+        return this.nextLife(this.population(offset), this.state[offset])
     }
     // 活性数によって次世代を決定する
     nextLife(population, state=null) {
