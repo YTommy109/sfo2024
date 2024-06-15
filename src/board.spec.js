@@ -42,4 +42,9 @@ describe('活性数に基づいて、来世が決まる', () => {
         const board1 = new Board(bl1)
         expect(board1.nextLife(1)).toBe(0)
     })
+    it('活性数が 2 なら次世代は現状維持', () => {
+        const board1 = new Board(bl1)
+        expect(board1.nextLife(2, 0)).toBe(0)
+        expect(board1.nextLife(2, 1)).toBe(1)
+    })
 })
