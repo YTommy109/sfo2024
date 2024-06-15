@@ -1,3 +1,5 @@
+import Board from './board'
+
 // ブリンカーパターン1
 const bl1 = [
     0, 0, 0,
