@@ -41,9 +41,8 @@ class Board {
     // 指定したセルの次世代の状態を取得する
     nextCell(offset) {
         const population = this.population(offset)
-        const state = this.state[offset]
         if (population == 2) {
-            return state
+            return this.state[offset]
         }
         return population == 3 ? 1 : 0
     }
