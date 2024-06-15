@@ -33,22 +33,6 @@ describe('ボードに関するテスト', () => {
     })
 })
 
-describe('活性数に基づいて、来世が決まる', () => {
-    it('活性数が 3 なら次世代は活性', () => {
-        const board1 = new Board(bl1)
-        expect(board1.nextLife(3)).toBe(1)
-    })
-    it('活性数が 1 なら次世代は非活性', () => {
-        const board1 = new Board(bl1)
-        expect(board1.nextLife(1)).toBe(0)
-    })
-    it('活性数が 2 なら次世代は現状維持', () => {
-        const board1 = new Board(bl1)
-        expect(board1.nextLife(2, 0)).toBe(0)
-        expect(board1.nextLife(2, 1)).toBe(1)
-    })
-})
-
 describe('八近傍の活性数を数える', () => {
     it('bl1 の北西の活性数は 2', () => {
         const board1 = new Board(bl1)

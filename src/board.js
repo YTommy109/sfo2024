@@ -47,13 +47,6 @@ class Board {
         }
         return population == 3 ? 1 : 0
     }
-    // 活性数によって次世代を決定する
-    nextLife(population, state=null) {
-        if (population == 2) {
-            return state
-        }
-        return population == 3 ? 1 : 0
-    }
     // 八近傍の活性数を数える
     population(offset) {
         // FIXME: この実装はまだ正しくありません
