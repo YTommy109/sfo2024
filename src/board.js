@@ -40,13 +40,6 @@ class Board {
     }
     // 指定したセルの次世代の状態を取得する
     nextCell(offset) {
-        // FIXME: この実装はまだ正しくありません
-        let pop = null
-        if (JSON.stringify(this.state) == JSON.stringify(bl1)) {
-            pop = pop1
-        } else {
-            pop = pop2
-        }
         return this.nextLife(this.population(offset), this.state[offset])
     }
     // 活性数によって次世代を決定する
