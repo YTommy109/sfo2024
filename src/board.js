@@ -18,11 +18,11 @@ class Board {
     }
     // 次世代ボードを取得する
     nextBoard() {
-        // FIXME: この実装はまだ正しくありません
-        if (JSON.stringify(this.state) == JSON.stringify(bl1)) {
-            return bl2
+        const nb = []
+        for (let i=0; i<this.state.length; i++) {
+            nb.push(this.nextCell(i))
         }
-        return bl1
+        return nb
     }
     // 指定したセルの次世代の状態を取得する
     nextCell(offset) {
