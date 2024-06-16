@@ -60,6 +60,10 @@ class Board {
     toCoordinate(offset) {
         return [offset % this.size + 1, Math.floor(offset / this.size + 1)]
     }
+    // 指定座標のセルの状態を取得する
+    getCell(x, y) {
+        return 0
+    }
 }
 
 export default Board
