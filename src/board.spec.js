@@ -14,6 +14,13 @@ const bl2 = [
     0, 1, 0
 ]
 
+describe('ボードの初期化について', () => {
+    it('初期化時にボードのサイズを指定できる', () => {
+        const board = new Board([], 10)
+        expect(board.size).toEqual(10)
+    })
+})
+
 describe('ボードに関するテスト', () => {
     it('ブリンカーが動作する', () => {
         const board = new Board(bl1)
