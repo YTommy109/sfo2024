@@ -65,3 +65,10 @@ describe('オフセットから座標への変換', () => {
         expect(board.toCoordinate(1)).toEqual([2, 1])
     })
 })
+
+describe('指定座標のセルを取得する', () => {
+    it('北西のセルが 0', () => {
+        const board = new Board(bl1)
+        expect(board.getCell(1, 1)).toBe(0)
+    })
+})
