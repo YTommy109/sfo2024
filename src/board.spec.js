@@ -54,3 +54,10 @@ describe('八近傍の活性数を数える', () => {
         expect(board1.population(1)).toBe(3)
     })
 })
+
+describe('オフセットから座標への変換', () => {
+    it('北西は (1, 1)', () => {
+        const board = new Board([])
+        expect(board.toCoordinate(0)).toEqual([1, 1])
+    })
+})
