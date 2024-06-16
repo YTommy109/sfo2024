@@ -50,11 +50,22 @@ class Board {
     }
     // 八近傍の活性数を数える
     population(offset) {
+        const [x, y] = this.toCoordinate(offset)
+        let pop = 0
+        pop += this.getCell(x - 1, y - 1)
+        pop += this.getCell(x, y - 1)
+        pop += this.getCell(x + 1, y - 1)
+        pop += this.getCell(x - 1, y)
+        pop += this.getCell(x + 1, y)
+        pop += this.getCell(x - 1, y + 1)
+        pop += this.getCell(x, y + 1)
+        pop += this.getCell(x + 1, y + 1)
+        return pop
         // FIXME: この実装はまだ正しくありません
-        if (JSON.stringify(this.state) == JSON.stringify(bl1)) {
-            return pop1[offset]
-        }
-        return pop2[offset]
+        // if (JSON.stringify(this.state) == JSON.stringify(bl1)) {
+        //     return pop1[offset]
+        // }
+        // return pop2[offset]
     }
     // オフセットから座標への変換
     toCoordinate(offset) {
