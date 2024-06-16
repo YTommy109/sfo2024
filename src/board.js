@@ -58,8 +58,7 @@ class Board {
     }
     // オフセットから座標への変換
     toCoordinate(offset) {
-        // FIXME: この実装はまだ正しくありません
-        return [1, 1]
+        return [offset % this.size + 1, Math.floor(offset / this.size + 1)]
     }
 }
 
