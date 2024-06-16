@@ -83,4 +83,8 @@ describe('指定座標のセルを取得する', () => {
         const board = new Board(bl1)
         expect(board.getCell(1, 0)).toBe(0)
     })
+    it('x が 3 より大きければ不活性', () => {
+        const board = new Board(bl1)
+        expect(board.getCell(4, 1)).toBe(0)
+    })
 })
