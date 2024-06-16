@@ -27,10 +27,11 @@ const pop2 = [
 ]
 
 class Board {
-    constructor(init) {
+    constructor(init, size=3) {
         this.state = init
+        this._size = size
     }
-    get size() { return 10 }
+    get size() { return this._size }
     // 次世代ボードを取得する
     nextBoard() {
         const nb = []
