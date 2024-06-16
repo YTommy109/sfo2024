@@ -62,7 +62,7 @@ class Board {
     }
     // 指定座標のセルの状態を取得する
     getCell(x, y) {
-        return 0
+        return this.state[(y - 1) * this.size + (x - 1)]
     }
 }
 
