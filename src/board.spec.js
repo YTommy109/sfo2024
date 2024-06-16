@@ -19,6 +19,10 @@ describe('ボードの初期化について', () => {
         const board = new Board([], 10)
         expect(board.size).toEqual(10)
     })
+    it('ボードのサイズを省略した場合の幅は 3', () => {
+        const board = new Board([])
+        expect(board.size).toEqual(3)
+    })
 })
 
 describe('ボードに関するテスト', () => {
