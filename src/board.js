@@ -64,6 +64,7 @@ class Board {
     getCell(x, y) {
         if (x < 1) return 0
         if (y < 1) return 0
+        if (x > this._size) return 0
         return this.state[(y - 1) * this.size + (x - 1)]
     }
 }
