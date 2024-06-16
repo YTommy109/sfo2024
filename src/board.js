@@ -56,6 +56,11 @@ class Board {
         }
         return pop2[offset]
     }
+    // オフセットから座標への変換
+    toCoordinate(offset) {
+        // FIXME: この実装はまだ正しくありません
+        return [1, 1]
+    }
 }
 
 export default Board
