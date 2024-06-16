@@ -30,6 +30,7 @@ class Board {
     constructor(init) {
         this.state = init
     }
+    get size() { return 10 }
     // 次世代ボードを取得する
     nextBoard() {
         const nb = []
