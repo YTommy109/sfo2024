@@ -71,4 +71,8 @@ describe('指定座標のセルを取得する', () => {
         const board = new Board(bl1)
         expect(board.getCell(1, 1)).toBe(0)
     })
+    it('西のセルが 1', () => {
+        const board = new Board(bl1)
+        expect(board.getCell(1, 2)).toBe(1)
+    })
 })
