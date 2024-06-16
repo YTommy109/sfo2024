@@ -1,31 +1,3 @@
-// ブリンカーパターン1
-const bl1 = [
-    0, 0, 0,
-    1, 1, 1,
-    0, 0, 0
-]
-
-// ブリンカーパターン2
-const bl2 = [
-    0, 1, 0,
-    0, 1, 0,
-    0, 1, 0
-]
-
-// 事前に数えた活性数1
-const pop1 = [
-    2, 3, 2,
-    1, 2, 1,
-    2, 3, 2
-]
-
-// 事前に数えた活性数2
-const pop2 = [
-    2, 1, 2,
-    3, 2, 3,
-    2, 1, 2
-]
-
 class Board {
     constructor(init, size=3) {
         this.state = init
@@ -61,11 +33,6 @@ class Board {
         pop += this.getCell(x, y + 1)
         pop += this.getCell(x + 1, y + 1)
         return pop
-        // FIXME: この実装はまだ正しくありません
-        // if (JSON.stringify(this.state) == JSON.stringify(bl1)) {
-        //     return pop1[offset]
-        // }
-        // return pop2[offset]
     }
     // オフセットから座標への変換
     toCoordinate(offset) {
