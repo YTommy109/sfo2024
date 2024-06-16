@@ -60,4 +60,8 @@ describe('オフセットから座標への変換', () => {
         const board = new Board([])
         expect(board.toCoordinate(0)).toEqual([1, 1])
     })
+    it('北は (2, 1)', () => {
+        const board = new Board([])
+        expect(board.toCoordinate(1)).toEqual([2, 1])
+    })
 })
